@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gms-manh-config-service 
+  cloud:
+    config:
+      server:
+        default-label: master        
+        git:
+          searchPaths: '{application}/{profile}'
+          uri: file://C://praveen//personal//Devops_Training//Git//Repositories//cloud_config_files          
+server:
+  port: 4000
+
+  
+  
+info:
+  app:
+    name: ${spring.application.name}
+    description: Configuration server for GMS  
+management:
+  endpoints:
+    web:
+      base-path: /
